@@ -72,6 +72,6 @@ for:
     - cmd: appveyor-tools\secure-file -decrypt jangerner.pfx.enc -secret "%SECUREFILE_DECODE_SECRET%" -salt "%PFX_SALT%"
 
     - cmd: set "PATH=%PYTHON%;%PYTHON%\Scripts;%PATH%"
-    - cmd: sh install_windows.sh
+    - ps: sh install_windows.sh
   build_script: 
     - cmd: "sh wxPython/build/Windows/build-all.sh"
